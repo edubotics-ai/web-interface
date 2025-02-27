@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 0 20px;
+        line-height: 1.6;
+        color: #333;
+        text-align: center;
+      }
+
+      h1 {
+        color: #e74c3c;
+        margin-bottom: 20px;
+      }
+
+      p {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 25px;
+      }
+
+      a {
+        display: inline-block;
+        background-color: #3498db;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+
+      a:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Oops! Something went wrong.</h1>
+    <p>Details: {{ error }}</p>
+    <a href="/">Go back to the home page</a>
+  </body>
+</html>

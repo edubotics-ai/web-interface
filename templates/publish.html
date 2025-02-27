@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/main.css" />
+    <title>Publish Assistant</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Publish Assistant</h1>
+    <form id="publishForm" action="/publish" method="post">
+      <!-- <input type="text" name="hf_token" placeholder="Hugging Face Token" /> -->
+      <input type="text" name="space_name" placeholder="Space Name" required />
+      <button type="submit" id="publishButton">Publish</button>
+    </form>
+
+    <div id="loading">
+      <div class="spinner"></div>
+      <p>Publishing to Hugging Face Spaces...</p>
+      <p>This may take a few minutes. Please don't close this page.</p>
+    </div>
+
+    <script>
+      document
+        .getElementById("publishForm")
+        .addEventListener("submit", function (e) {
+          // Show loading spinner
+          document.getElementById("loading").style.display = "block";
+
+          // Disable the button to prevent multiple submissions
+          document.getElementById("publishButton").disabled = true;
+          document.getElementById("publishButton").innerText = "Publishing...";
+        });
+    </script>
+  </body>
+</html>
